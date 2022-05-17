@@ -1,0 +1,95 @@
+@import '../../scss/_vars'
+
+.banner
+    color: $textColor
+    margin-top: 150px
+    margin-bottom: 260px
+    @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+        margin-top: 50px
+        margin-bottom: 150px
+    @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+        margin-top: 80px
+        margin-bottom: 120px
+    @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+        margin-top: 80px
+        margin-bottom: 120px
+    @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+        margin-top: 60px
+        margin-bottom: 100px
+    @media screen and ( max-width:  $mobile) and (min-width: $min)
+        margin-top: 60px
+        margin-bottom: 100px
+    &__wrapper
+        animation-name: slide
+        animation-duration: 3s
+    &__title
+        font-size: 64px
+        white-space: nowrap
+        
+        // @media screen and (max-width: '769px') and  (max-width: $pc)
+        //     margin-top: 50px
+        // @media screen and (min-width: $min) and (max-width: $tablet)
+        //     margin-top: 0
+
+        @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+            // margin-top: 50px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            font-size: 44px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 44px
+        
+    
+    &__text
+        font-size: 36px
+        font-weight: 600
+        margin-top: 35px
+        width: 700px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            width: 100%
+            font-size: 30px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            width: 100%
+            font-size: 30px
+            text-align: center
+    &__btn
+        font-size: 28px
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+        border-radius: 83px
+        padding: 20px 65px
+        color: $textColor
+        margin-top: 70px
+        margin-left: 50px
+        white-space: nowrap
+        // margin-bottom: 260px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 25px
+        &:hover
+            animation: btn-animation 1s ease-in forwards
+            // -webkit-animation: btn-animation 1s ease-in forwards
+        
+    & svg
+        display: none
+        position: absolute
+        top: 19%
+        left: 60%
+
+@keyframes slide
+    0%
+        margin-left: 100%
+        
+    100%
+        margin-left: 0%
+
+@keyframes btn-animation
+    0%
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+    100%
+        background: linear-gradient(270deg, #6978D1 0%, #945DD6 66.67%, #13ADC7 100%)
+    
+
+
+// @-webkit-keyframes  btn-animation
+//     0%
+//         background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+//     100%
+//         background: linear-gradient(270deg, #6978D1 0%, #945DD6 66.67%, #13ADC7 100%)

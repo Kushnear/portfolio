@@ -1,0 +1,64 @@
+@import ../../scss/_vars
+
+.additional
+    color: $textColor
+    margin-top: 130px
+    &__list
+        // list-style: inside
+        margin-left: 10%
+        width: 90%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        row-gap: 30px
+        column-gap: 10em
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            // width: 70%
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            flex-wrap: nowrap
+            flex-direction: column
+            align-items: flex-start
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            flex-wrap: nowrap
+            flex-direction: column
+            align-items: flex-start
+            font-size: 30px
+        
+    &__title
+        font-weight: 600
+        font-size: 48px
+        margin-bottom: 80px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            font-size: 40px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            font-size: 35px
+            margin-bottom: 60px
+            text-align: center
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 35px
+            margin-bottom: 60px
+            text-align: center
+    &__item
+        // display: flex
+        flex: 1 1 calc((100% / 3) - 3em)
+        font-weight: 600
+        font-size: 36px
+        opacity: 0
+        @for $i from 1 through 6
+            &:nth-child(#{$i})
+                animation: 1s #{$i * .2}s forwards ease show-up
+                
+        // margin-left: 5px
+        // text-align: end
+    // &__item::marker
+        // position: relative
+        // @media screen and ( max-width:  $mobile) and (min-width: $min)
+        //     font-size: 10px
+        
+@keyframes show-up
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+

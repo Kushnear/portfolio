@@ -1,0 +1,42 @@
+@import '_vars'
+@import '_fonts'
+@import '../components/header/_header'
+@import '../components/banner/_banner'
+@import '../components/projects/_projects'
+@import ../components/technologies/_technologies
+@import ../components/additional/_additional
+@import ../components/about/_about
+@import ../components/footer/_footer
+@import ../components/form/_form
+@import ../components/scrollUpBtn/_scrollUpBtn
+
+
+
+
+body 
+    box-sizing: border-box
+    background: $background
+    margin: 0
+    font-family: 'regular'
+
+.container
+    max-width: 1280px
+    width: 100%
+    padding: 0 16px
+    margin: 0 auto
+    &--fluid
+        max-width: 1150px
+        @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+            // max-width: 900px
+p 
+    margin: 0
+h1
+    margin: 0
+ul
+    margin: 0
+    padding: 0
+a
+    text-decoration: none
+
+
+

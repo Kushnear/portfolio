@@ -1,0 +1,98 @@
+@import ../../scss/_vars
+
+.feedback-form
+    margin-top: 250px
+    @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+        margin-top: 180px
+    @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+        margin-top: 140px
+    @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+        margin-top: 140px
+    @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+        margin-top: 100px
+    @media screen and ( max-width:  $mobile) and (min-width: $min)
+        margin-top: 80px
+    &__title
+        font-weight: 600
+        font-size: 48px
+        margin-bottom: 80px
+        color: $textColor
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            text-align: center
+            margin-bottom: 50px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            text-align: center
+            margin-bottom: 50px
+        
+    &__form
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        font-family: 'regular'
+        color: $textColor
+        flex-basis: 80%
+        border: 2px solid $textColor
+        border-radius: 15px
+        box-shadow: 0px 12px 19px rgba(53, 105, 128, 0.3)
+        padding: 10px 40px 60px 40px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            // flex-basis: 340px
+            width: 30%
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            width: 28%
+    &__wrapper
+        display: flex
+        justify-content: center
+        // width: 60%
+        // background: #FFFFFF
+        // border: 2px solid $textColor
+        // padding: 10px 40px 60px 40px
+        // box-shadow: 0px 4px 8px rgba(53, 105, 128, 0.3)
+        // border-radius: 15px
+    &__label
+        font-size: 1.5em
+        display: flex
+        max-width: 100%
+        margin-top: 46px
+    &__field
+        font-family: 'regular'
+        color: $textColor
+        // height: 30px
+        background: transparent
+        border: 3px solid #CBD6E2
+        border-radius: 20px
+        line-height: 1.5
+        // padding: 0 10px
+        // width: 100%
+        // flex-basis: 100%
+        font-size: 2em
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            font-size: 1.5em
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 1.2em
+    &__field::placeholder
+        // font-family: 'regular'
+        // font-size: 2em
+        // line-height: 1.5
+        // vertical-align: baseline
+    &__message
+        background: transparent
+        border: 3px solid #CBD6E2
+        border-radius: 20px
+        font-family: 'regular'
+        color: $textColor
+        font-size: 2em
+    &__btn
+        align-self: center
+        width: 30%
+        font-size: 28px
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+        border-radius: 20px
+        padding: 15px 10px
+        color: $textColor
+        margin-top: 70px
+        // margin-left: 50px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            width: 50%
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            width: 50%

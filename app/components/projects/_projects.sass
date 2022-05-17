@@ -1,0 +1,91 @@
+@import ../../scss/_vars
+
+.projects
+    color: $textColor
+    
+
+    &__cards
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        column-gap: 10rem
+        row-gap: 5rem
+        // gap: 10rem
+        @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+            column-gap: 3rem
+            row-gap: 3rem
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            column-gap: 0
+            justify-content: center
+            // margin: 0 auto
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            column-gap: 0
+            justify-content: center
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            column-gap: 0
+            justify-content: center
+
+    &__card
+        flex: 1 1 calc((100%/2) - 5rem)
+        // width: 48%
+        @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+            flex: 1 1 calc((100%/2) - 5rem)
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            flex: 0 1 70%
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            flex: 0 1 90%
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            flex: 0 1 90%
+    &__title
+        font-size: 64px
+        color: $textColor
+        margin-bottom: 95px
+        @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+            margin-bottom: 60px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            margin-bottom: 50px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            margin-bottom: 45px
+            font-size: 55px
+            text-align: center
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            margin-bottom: 45px
+            font-size: 55px
+            text-align: center
+    &__card-border
+        padding: 25px
+        display: flex
+        flex-direction: column
+        align-items: center
+        // width: 48%
+        background: #0F1624
+        box-shadow: 0px 0px 12px #FFFFFF
+        border-radius: 50px 0px
+    &__card-img
+        // padding: 25px
+    &__card-img > img
+        width: 100%
+    &__card-title
+        // font-weight: 600
+        font-size: 36px
+    &__card-separator
+        width: 300px
+        height: 4px
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+        border-radius: 83px
+    &__card-text
+        // padding: 25px
+        font-weight: 600
+        font-size: 28px
+        margin-top: 25px
+        margin-bottom: 35px
+    &__card-btn
+        width: 200px
+        height: 60px
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+        border-radius: 83px 
+        color: $textColor
+        font-weight: 600
+        font-size: 20px
+
+    

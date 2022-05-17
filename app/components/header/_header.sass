@@ -1,0 +1,71 @@
+@import ../../scss/_vars
+
+.header
+    width: 100%
+    color: $textColor
+    @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+        display: none
+    @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+        display: none
+    @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+        display: none
+    @media screen and ( max-width:  $mobile) and (min-width: $min)
+        display: none
+    &__wrapper
+        height: 140px
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        
+    
+    &__logo-wrapper
+        display: flex
+        align-items: center
+    &__logo
+        margin-right: 13px
+        &:hover
+            animation-name: iconRotate
+            animation-duration: 1s
+            animation-iteration-count: infinite
+            animation-timing-function: linear
+    &__logo-text
+        color: $textColor
+        font-size: 30px
+    &__link
+        margin-right: 100px
+        color: $textColor
+        text-decoration: none
+        font-size: 30px
+        transition: all .3s ease
+        &:hover
+            color: $hoverColor
+    &__social-link
+        margin-right: 30px
+        transition: all .3s ease
+        &:hover
+            color: $hoverColor
+        &:nth-child(3)
+            margin-right: 0
+    &__icon
+        transition: all .3s ease-in-out
+        &:hover
+            transition: all .3s ease-in-out
+            .header__icon-elem
+                transition: all .3s ease-in-out
+                fill: $hoverColor
+
+
+@keyframes iconRotate
+    0%
+        transform: rotate(0deg)
+        
+    100%
+        transform: rotate(360deg)
+    
+
+
+
+
+
+    

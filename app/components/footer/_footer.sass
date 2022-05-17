@@ -1,0 +1,38 @@
+@import ../../scss/_vars
+.footer
+    margin-top: 345px
+    margin-bottom: 80px
+    font-weight: 600
+    font-size: 42px
+    color: $textColor
+    @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+        margin-top: 230px
+    @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+        margin-top: 180px
+        font-size: 30px
+    @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+        margin-top: 180px
+        font-size: 30px
+    @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+        margin-top: 150px
+        font-size: 20px
+    @media screen and ( max-width:  $mobile) and (min-width: $min)
+        margin-top: 130px
+        font-size: 20px
+    &__wrapper
+        width: 100%
+        // padding: 0 120px
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__social
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            display: none
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            display: none
+
+        // flex-direction: column
+    

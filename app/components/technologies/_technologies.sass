@@ -1,0 +1,106 @@
+@import ../../scss/_vars
+
+.technologies
+    color: $textColor
+    margin-top: 330px
+    @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+        margin-top: 200px
+    @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+        margin-top: 150px
+    @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+        margin-top: 150px
+    @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+        margin-top: 130px
+    @media screen and ( max-width:  $mobile) and (min-width: $min)
+        margin-top: 120px
+
+    &__title
+        font-weight: 600
+        font-size: 64px
+        margin-bottom: 135px
+        @media screen and ( max-width:  $desktoplg) and (min-width: $desktop)
+            margin-bottom: 60px
+        @media screen and ( max-width:  $desktop) and (min-width: $tabletlg)
+            margin-bottom: 40px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            margin-bottom: 40px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            margin-bottom: 30px
+            font-size: 50px
+            text-align: center
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            margin-bottom: 30px
+            font-size: 50px
+            text-align: center
+    &__list
+        display: flex
+        flex-direction: column
+        row-gap: 55px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            // align-self: center
+            // width: 70%
+
+            
+    &__caption
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding-left: 25px
+        padding-right: 60px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            // width: 65%
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            padding-left: 15px
+            padding-right: 20px
+    &__caption-title
+        font-weight: 600
+        font-size: 36px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            font-size: 30px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            font-size: 25px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 22px
+    &__caption-level
+        font-weight: 600
+        font-size: 24px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            font-size: 20px
+        @media screen and ( max-width:  $tablet) and (min-width: $mobile)
+            font-size: 15px
+        @media screen and ( max-width:  $mobile) and (min-width: $min)
+            font-size: 12px
+    &__progress-bar
+        height: 32.3px
+        width: 100%
+        background: #162950
+        border-radius: 83px
+        @media screen and ( max-width:  $tabletlg) and (min-width: $tablet)
+            // width: 70%
+    &__progress-scale
+        background: linear-gradient(270deg, #13ADC7 0%, #6978D1 66.67%, #945DD6 100%)
+        border-radius: 83px
+        height: 32.3px
+    &__progress-scale--advanced
+        width: 75%
+        animation: 3s ease-in-out progress1
+    &__progress-scale--regular
+        width: 50%
+        animation: 3s ease-in-out progress2
+        
+    @keyframes progress1
+        0%
+            width: 0%
+            
+        100%
+            width: 75%
+    
+    @keyframes progress2
+        0%
+            width: 0%
+            
+        100%
+            width: 50%
+            
+
+        
